@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://vwrf071jivtn"]
+
+[ext_resource type="Script" path="res://PlayerStates.gd" id="1_xoini"]
+[ext_resource type="Script" path="res://IdleState.gd" id="2_8v1h8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kisp8"]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kisp8")
+
+[node name="PlayerStates" type="Node" parent="."]
+script = ExtResource("1_xoini")
+
+[node name="IdleState" type="Node" parent="PlayerStates"]
+script = ExtResource("2_8v1h8")
